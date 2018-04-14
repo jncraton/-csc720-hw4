@@ -1,9 +1,12 @@
-CSC720 Homework 4
-=================
+% CSC720 Homework 4
+% Jon Craton
 
 Due Date: Monday, April 30, 2018 by Midnight
 
-1.  (15 points) (Exercise 7.1) Answer each part TRUE or FALSE (Big O).
+1. (15 points)
+==============
+
+(Exercise 7.1) Answer each part TRUE or FALSE (Big O).
 
     a.  2n=O(n)
 
@@ -11,7 +14,10 @@ Due Date: Monday, April 30, 2018 by Midnight
 
     c.  3^n^=2^O(n)^
 
-2.  (15 points) (Exercise 7.2) Answer each part TRUE or FALSE (Small o).
+2.  (15 points) 
+===============
+
+(Exercise 7.2) Answer each part TRUE or FALSE (Small o).
 
     a.  n=o(2n)
 
@@ -19,31 +25,68 @@ Due Date: Monday, April 30, 2018 by Midnight
 
     c.  n=o(logn)
 
-3.  (10 points) (Exercise 7.3) Which of the following pairs of numbers
-    are relatively prime? Show the calculations that led to
-    your conclusions.
+3.  (10 points) 
+===============
+
+(Exercise 7.3) Which of the following pairs of numbers are relatively prime? Show the calculations that led to your conclusions.
 
     a.  1274 and 10505
 
 (Hint: use Euclidean algorithm to calculate the greatest common divisor
-between a, and b (assume a&gt;b), gcd(a, b) = gcd(b, a mod b). a and b
+between a, and b (assume a>b), gcd(a, b) = gcd(b, a mod b). a and b
 are relatively prime if gcd(a, b) = 1.)
 
-1.  (20 points) (Exercise 7.5) Is the following formula satisfiable?
-    Why?
+```python
+def gcd(a, b):
+  show = '%d = ' % a
+  
+  while(a >= b): 
+    show += '%d + ' % b
+    a = a - b
+
+  print(show + str(a))
+  
+  if a <= 0: 
+    return b
+    
+  return gcd(b, a)
+
+print('GCD is %d' % gcd(10505, 1274))
+```
+
+4.  (20 points)
+===============
+
+(Exercise 7.5) Is the following formula satisfiable? Why?
 
 $$\left( x\bigvee y \right)\bigwedge\left( x\bigvee\overset{\overline{}}{y} \right)\bigwedge\left( \overset{\overline{}}{x}\bigvee y \right)\bigwedge\left( \overset{\overline{}}{x}\bigvee\overset{\overline{}}{y} \right)$$
 
-1.  (10 points) What is P-Problem? What is NP-Problem? What is
-    NP-Complete problem?
+This is not satisfiable. A formala is satisfiable if some set of values can make it true. This formula is the conjunction of all four possible results of binary disjunction. Because binary disjunction is false in the case where both operands are false, this formula is not satisfiable.
 
-2.  (20 points) Show that NP is closed under union.
+5.  (10 points)
+===============
+
+> What is P-Problem? What is NP-Problem? What is NP-Complete problem?
+
+A P problem is a decision problem that is able to be solved in polynomial time. 
+
+An NP problem is one that is able to be solved in non-deterministic polynomial time. That is, if we could execute infinitely many computations in paralell (i.e. on an NDTM), this problem is able to be solved in polynomial time. A more practical implication of this is that a deterministic Turing machine is able to verify the correctness of a solution in polynomial time essentially because it only needs to execute one "path" through the NDTM.
+
+An NP-Complete problem is one of a class of problems to which any other NP problem can be reduced in polynomial time. If any NP-Complete problems are found to have polynomial solutions, then P=NP.
+
+6.  (20 points)
+===============
+
+Show that NP is closed under union.
 
 (Hint: For any two languages L~1~ and L~2~, let M~1~ and M~2~ be the NTM
 that decide them in polynomial time. Construct a NTM M’ that decided
 L~1~UL~2~ in polynomial time.)
 
-1.  (10 points) Prove that 3SAT is polynomial reducible to CLIQUE.
+7.  (10 points)
+===============
+
+Prove that 3SAT is polynomial reducible to CLIQUE.
 
     (Hint: This is Theorem 7.32 in the text book. It shows a very
     interesting process to connect two problems in two

@@ -10,6 +10,12 @@ $(SRC).html: $(SRC).pmd
 $(SRC).md: $(SRC).pmd
 	pweave --format=pandoc $(SRC).pmd
 
+$(SRC).py: $(SRC).pmd
+	ptangle $(SRC).pmd
+
+run: $(SRC).py
+	python3 $(SRC).py
+
 clean:
 	rm -f $(SRC).html $(SRC).md
 	rm -rf figures
