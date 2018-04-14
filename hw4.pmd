@@ -1,34 +1,52 @@
-<h1 id="csc720-homework-4">CSC720 Homework 4</h1>
-<p>Due Date: Monday, April 30, 2018 by Midnight</p>
-<ol style="list-style-type: decimal">
-<li><p>(15 points) (Exercise 7.1) Answer each part TRUE or FALSE (Big O).</p>
-<ol style="list-style-type: lower-alpha">
-<li><p>2n=O(n)</p></li>
-<li><p>n<sup>2</sup>=O(n)</p></li>
-<li><p>3<sup>n</sup>=2<sup>O(n)</sup></p></li>
-</ol></li>
-<li><p>(15 points) (Exercise 7.2) Answer each part TRUE or FALSE (Small o).</p>
-<ol style="list-style-type: lower-alpha">
-<li><p>n=o(2n)</p></li>
-<li><p>2n=o(n<sup>2</sup>)</p></li>
-<li><p>n=o(logn)</p></li>
-</ol></li>
-<li><p>(10 points) (Exercise 7.3) Which of the following pairs of numbers are relatively prime? Show the calculations that led to your conclusions.</p>
-<ol style="list-style-type: lower-alpha">
-<li><p>1274 and 10505</p></li>
-</ol></li>
-</ol>
-<p>(Hint: use Euclidean algorithm to calculate the greatest common divisor between a, and b (assume a&gt;b), gcd(a, b) = gcd(b, a mod b). a and b are relatively prime if gcd(a, b) = 1.)</p>
-<ol style="list-style-type: decimal">
-<li><p>(20 points) (Exercise 7.5) Is the following formula satisfiable? Why?</p></li>
-</ol>
-<p><br /><span class="math display">$$\left( x\bigvee y \right)\bigwedge\left( x\bigvee\overset{\overline{}}{y} \right)\bigwedge\left( \overset{\overline{}}{x}\bigvee y \right)\bigwedge\left( \overset{\overline{}}{x}\bigvee\overset{\overline{}}{y} \right)$$</span><br /></p>
-<ol style="list-style-type: decimal">
-<li><p>(10 points) What is P-Problem? What is NP-Problem? What is NP-Complete problem?</p></li>
-<li><p>(20 points) Show that NP is closed under union.</p></li>
-</ol>
-<p>(Hint: For any two languages L<sub>1</sub> and L<sub>2</sub>, let M<sub>1</sub> and M<sub>2</sub> be the NTM that decide them in polynomial time. Construct a NTM M’ that decided L<sub>1</sub>UL<sub>2</sub> in polynomial time.)</p>
-<ol style="list-style-type: decimal">
-<li><p>(10 points) Prove that 3SAT is polynomial reducible to CLIQUE.</p>
-<p>(Hint: This is Theorem 7.32 in the text book. It shows a very interesting process to connect two problems in two different domains. Briefly repeat the proof process here.)</p></li>
-</ol>
+CSC720 Homework 4
+=================
+
+Due Date: Monday, April 30, 2018 by Midnight
+
+1.  (15 points) (Exercise 7.1) Answer each part TRUE or FALSE (Big O).
+
+    a.  2n=O(n)
+
+    b.  n^2^=O(n)
+
+    c.  3^n^=2^O(n)^
+
+2.  (15 points) (Exercise 7.2) Answer each part TRUE or FALSE (Small o).
+
+    a.  n=o(2n)
+
+    b.  2n=o(n^2^)
+
+    c.  n=o(logn)
+
+3.  (10 points) (Exercise 7.3) Which of the following pairs of numbers
+    are relatively prime? Show the calculations that led to
+    your conclusions.
+
+    a.  1274 and 10505
+
+(Hint: use Euclidean algorithm to calculate the greatest common divisor
+between a, and b (assume a&gt;b), gcd(a, b) = gcd(b, a mod b). a and b
+are relatively prime if gcd(a, b) = 1.)
+
+1.  (20 points) (Exercise 7.5) Is the following formula satisfiable?
+    Why?
+
+$$\left( x\bigvee y \right)\bigwedge\left( x\bigvee\overset{\overline{}}{y} \right)\bigwedge\left( \overset{\overline{}}{x}\bigvee y \right)\bigwedge\left( \overset{\overline{}}{x}\bigvee\overset{\overline{}}{y} \right)$$
+
+1.  (10 points) What is P-Problem? What is NP-Problem? What is
+    NP-Complete problem?
+
+2.  (20 points) Show that NP is closed under union.
+
+(Hint: For any two languages L~1~ and L~2~, let M~1~ and M~2~ be the NTM
+that decide them in polynomial time. Construct a NTM M’ that decided
+L~1~UL~2~ in polynomial time.)
+
+1.  (10 points) Prove that 3SAT is polynomial reducible to CLIQUE.
+
+    (Hint: This is Theorem 7.32 in the text book. It shows a very
+    interesting process to connect two problems in two
+    different domains. Briefly repeat the proof process here.)
+
+
