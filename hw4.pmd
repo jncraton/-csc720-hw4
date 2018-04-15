@@ -6,13 +6,17 @@ Due Date: Monday, April 30, 2018 by Midnight
 1. (15 points)
 ==============
 
-(Exercise 7.1) Answer each part TRUE or FALSE (Big O).
+> (Exercise 7.1) Answer each part TRUE or FALSE (Big O).
 
-    a.  2n=O(n)
+a.  2n=O(n)
 
-    b.  n^2^=O(n)
+True. Coefficients do not alter growth rate, and Big O is concerned with growth rate.
 
-    c.  3^n^=2^O(n)^
+b.  n²=O(n)
+
+False. The fastest growing term determines Big O classification, so n²=O(n²)
+
+c.  3ⁿ=2<sup>O(n)</sup>
 
 2.  (15 points) 
 ===============
@@ -77,11 +81,9 @@ An NP-Complete problem is one of a class of problems to which any other NP probl
 6.  (20 points)
 ===============
 
-Show that NP is closed under union.
+> Show that NP is closed under union.
 
-(Hint: For any two languages L~1~ and L~2~, let M~1~ and M~2~ be the NTM
-that decide them in polynomial time. Construct a NTM M’ that decided
-L~1~UL~2~ in polynomial time.)
+Consider two languages NP L₁ and L₂. We can create two Turing machines, M₁ and M₂¸ that decide these languages. Consider the language L' = L₁ ∪ L₂. We can build a Turing machine M' to decide L' as M₁∨M∨₂. It is clear from this construction that the complexity of M' is a linear combination of the complexities of M₁ and M₂ as they are both executed once by M' in deciding L'. This shows that M' is still in NP and NP is closed over union.
 
 7.  (10 points)
 ===============
