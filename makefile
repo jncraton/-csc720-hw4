@@ -17,6 +17,6 @@ run: $(SRC).py
 	python3 $(SRC).py
 
 clean:
-	rm -f $(SRC).html $(SRC).md
+	rm -f $(SRC).html $(SRC).md $(SRC).py
 	rm -rf figures
 	rm -rf __pycache__
