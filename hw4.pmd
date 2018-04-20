@@ -10,7 +10,7 @@ Due Date: Monday, April 30, 2018 by Midnight
 
 a.  2n=O(n)
 
-True. Coefficients do not alter growth rate, and Big O is concerned with growth rate.
+True. Coefficients do not alter growth rate, and Big O is concerned with growth rate because it measures asymtotic worst-case behavior.
 
 b.  n²=O(n)
 
@@ -18,16 +18,24 @@ False. The fastest growing term determines Big O classification, so n²=O(n²)
 
 c.  3ⁿ=2<sup>O(n)</sup>
 
+True.
+
 2.  (15 points) 
 ===============
 
-(Exercise 7.2) Answer each part TRUE or FALSE (Small o).
+> (Exercise 7.2) Answer each part TRUE or FALSE (Small o).
 
-    a.  n=o(2n)
+a.  n=o(2n)
 
-    b.  2n=o(n^2^)
+True.
 
-    c.  n=o(logn)
+b.  2n=o(n²)
+
+True.
+
+c.  n=o(logn)
+
+False.
 
 3.  (10 points) 
 ===============
