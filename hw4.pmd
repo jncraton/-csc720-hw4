@@ -10,7 +10,7 @@ Due Date: Monday, April 30, 2018 by Midnight
 
 a.  2n=O(n)
 
-True. Coefficients do not alter growth rate, and Big O is concerned with growth rate because it measures asymtotic worst-case behavior.
+True. Coefficients do not alter growth rate, and Big O is concerned with growth rate because it measures asymptotic worst-case behavior.
 
 b.  n²=O(n)
 
@@ -73,7 +73,7 @@ print('GCD is %d' % gcd(10505, 1274))
 
 $$\left( x\bigvee y \right)\bigwedge\left( x\bigvee\overset{\overline{}}{y} \right)\bigwedge\left( \overset{\overline{}}{x}\bigvee y \right)\bigwedge\left( \overset{\overline{}}{x}\bigvee\overset{\overline{}}{y} \right)$$
 
-This is not satisfiable. A formala is satisfiable if some set of inputs can make it true. This formula is the conjunction of all four possible results of binary disjunction. Because binary disjunction is false in the case where both operands are false, this formula is not satisfiable.
+This is not satisfiable. A formula is satisfiable if some set of inputs can make it true. This formula is the conjunction of all four possible results of binary disjunction. Because binary disjunction is false in the case where both operands are false, this formula is not satisfiable.
 
 5.  (10 points)
 ===============
@@ -82,7 +82,7 @@ This is not satisfiable. A formala is satisfiable if some set of inputs can make
 
 A P problem is a decision problem that is able to be solved in polynomial time on a deterministic Turing machine. 
 
-An NP problem is one that is able to be solved in non-deterministic polynomial time. That is, if we could execute infinitely many computations in paralell (i.e. on an NDTM), this problem is able to be solved in polynomial time. A more practical implication of this is that a deterministic Turing machine is able to verify the correctness of a solution in polynomial time essentially because it only needs to execute one "path" through the NDTM.
+An NP problem is one that is able to be solved in non-deterministic polynomial time. That is, if we could execute infinitely many computations in parallel (i.e. on an NDTM), this problem is able to be solved in polynomial time. A more practical implication of this is that a deterministic Turing machine is able to verify the correctness of a solution in polynomial time essentially because it only needs to execute one "path" through the NDTM.
 
 An NP-Complete problem is one of a class of problems to which any other NP problem can be reduced in polynomial time. If any NP-Complete problems are found to have polynomial solutions, then P=NP.
 
