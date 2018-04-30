@@ -13,10 +13,13 @@ $(SRC).md: $(SRC).pmd
 $(SRC).py: $(SRC).pmd
 	ptangle $(SRC).pmd
 
+$(SRC).pdf: $(SRC).html
+	chromium-browser --headless --print-to-pdf=$(SRC).pdf $(SRC).html
+	
 run: $(SRC).py
 	python3 $(SRC).py
 
 clean:
-	rm -f $(SRC).html $(SRC).md $(SRC).py
+	rm -f $(SRC).pdf $(SRC).html $(SRC).md $(SRC).py
 	rm -rf figures
 	rm -rf __pycache__

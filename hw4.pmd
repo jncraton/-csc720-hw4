@@ -73,14 +73,14 @@ print('GCD is %d' % gcd(10505, 1274))
 
 $$\left( x\bigvee y \right)\bigwedge\left( x\bigvee\overset{\overline{}}{y} \right)\bigwedge\left( \overset{\overline{}}{x}\bigvee y \right)\bigwedge\left( \overset{\overline{}}{x}\bigvee\overset{\overline{}}{y} \right)$$
 
-This is not satisfiable. A formala is satisfiable if some set of values can make it true. This formula is the conjunction of all four possible results of binary disjunction. Because binary disjunction is false in the case where both operands are false, this formula is not satisfiable.
+This is not satisfiable. A formala is satisfiable if some set of inputs can make it true. This formula is the conjunction of all four possible results of binary disjunction. Because binary disjunction is false in the case where both operands are false, this formula is not satisfiable.
 
 5.  (10 points)
 ===============
 
 > What is P-Problem? What is NP-Problem? What is NP-Complete problem?
 
-A P problem is a decision problem that is able to be solved in polynomial time. 
+A P problem is a decision problem that is able to be solved in polynomial time on a deterministic Turing machine. 
 
 An NP problem is one that is able to be solved in non-deterministic polynomial time. That is, if we could execute infinitely many computations in paralell (i.e. on an NDTM), this problem is able to be solved in polynomial time. A more practical implication of this is that a deterministic Turing machine is able to verify the correctness of a solution in polynomial time essentially because it only needs to execute one "path" through the NDTM.
 
@@ -91,19 +91,19 @@ An NP-Complete problem is one of a class of problems to which any other NP probl
 
 > Show that NP is closed under union.
 
-Consider two languages NP L₁ and L₂. We can create two Turing machines, M₁ and M₂¸ that decide these languages. Consider the language L' = L₁ ∪ L₂. We can build a Turing machine M' to decide L' as M₁∨M∨₂. It is clear from this construction that the complexity of M' is a linear combination of the complexities of M₁ and M₂ as they are both executed once by M' in deciding L'. This shows that M' is still in NP and NP is closed over union.
+Consider two languages NP L₁ and L₂. We can create two Turing machines, M₁ and M₂¸ that decide these languages. Consider the language L' = L₁ ∪ L₂. We can build a Turing machine M' to decide L' as M₁∨M₂. It is clear from this construction that the complexity of M' is a polynomial combination of the complexities of M₁ and M₂ as they are both executed once by M' in deciding L'. This shows that M' is still in NP and NP is closed over union.
 
 7.  (10 points)
 ===============
 
-Prove that 3SAT is polynomial reducible to CLIQUE.
-
+    Prove that 3SAT is polynomial reducible to CLIQUE.
+    
     (Hint: This is Theorem 7.32 in the text book. It shows a very
     interesting process to connect two problems in two
     different domains. Briefly repeat the proof process here.)
 
 
-The basic idea is to convert the solutions to the 3SAT problem to cliques that can be found using traditional algorithms for the CLIQUE problem.
+The basic idea is to convert the solutions to the 3SAT problem to cliques that can be found using algorithms for the CLIQUE problem.
 
 Let ϕ be an expression with k clauses as follows:
 
@@ -113,7 +113,7 @@ We can convert this expression to a graph G as follows:
 
 A group of nodes is created for each clause in ϕ. Each node represents a literal in the clause. So, for 3SAT each group will be a triple. We will have k triples, where k is the number of clauses in ϕ as shown above.
 
-We then construct graph edges connected all nodes except:
+We then construct graph edges connecting all nodes except:
 
 1. No edges connect nodes in the same triple.
 2. No edges connect nodes with contradictory labels (a₁ would not connect to ¬a₁).
