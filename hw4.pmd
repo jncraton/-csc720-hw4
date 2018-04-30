@@ -124,7 +124,7 @@ Consider the case when ϕ is satisfiable. Select a value that satisfies its clau
 
 Consider the case when G has a k-clique. Each node in the clique will represent a different triple based on our construction. We can set boolean values for each node based on their labels. These values will not contradict, and each will satisfy its clause based on our constructions.
 
-∴ ϕ is satisfiable is G has a k-clique.
+∴ ϕ is satisfiable if G has a k-clique.
 
 ∴ G will have a k-clique if and only if ϕ is satisfiable.
 
