@@ -674,7 +674,7 @@ img {max-width : 100%}
 <p>(Exercise 7.1) Answer each part TRUE or FALSE (Big O).</p>
 </blockquote>
 <p>a.  2n=O(n)</p>
-<p>True. Coefficients do not alter growth rate, and Big O is concerned with growth rate because it measures asymtotic worst-case behavior.</p>
+<p>True. Coefficients do not alter growth rate, and Big O is concerned with growth rate because it measures asymptotic worst-case behavior.</p>
 <p>b.  n²=O(n)</p>
 <p>False. The fastest growing term determines Big O classification, so n²=O(n²)</p>
 <p>c.  3ⁿ=2<sup>O(n)</sup></p>
@@ -728,13 +728,13 @@ GCD is 1
 <h1>4.  (20 points)</h1>
 <p>(Exercise 7.5) Is the following formula satisfiable? Why?</p>
 <p><span class="math">\[\left( x\bigvee y \right)\bigwedge\left( x\bigvee\overset{\overline{}}{y} \right)\bigwedge\left( \overset{\overline{}}{x}\bigvee y \right)\bigwedge\left( \overset{\overline{}}{x}\bigvee\overset{\overline{}}{y} \right)\]</span class="math"></p>
-<p>This is not satisfiable. A formala is satisfiable if some set of inputs can make it true. This formula is the conjunction of all four possible results of binary disjunction. Because binary disjunction is false in the case where both operands are false, this formula is not satisfiable.</p>
+<p>This is not satisfiable. A formula is satisfiable if some set of inputs can make it true. This formula is the conjunction of all four possible results of binary disjunction. Because binary disjunction is false in the case where both operands are false, this formula is not satisfiable.</p>
 <h1>5.  (10 points)</h1>
 <blockquote>
 <p>What is P-Problem? What is NP-Problem? What is NP-Complete problem?</p>
 </blockquote>
 <p>A P problem is a decision problem that is able to be solved in polynomial time on a deterministic Turing machine. </p>
-<p>An NP problem is one that is able to be solved in non-deterministic polynomial time. That is, if we could execute infinitely many computations in paralell (i.e. on an NDTM), this problem is able to be solved in polynomial time. A more practical implication of this is that a deterministic Turing machine is able to verify the correctness of a solution in polynomial time essentially because it only needs to execute one "path" through the NDTM.</p>
+<p>An NP problem is one that is able to be solved in non-deterministic polynomial time. That is, if we could execute infinitely many computations in parallel (i.e. on an NDTM), this problem is able to be solved in polynomial time. A more practical implication of this is that a deterministic Turing machine is able to verify the correctness of a solution in polynomial time essentially because it only needs to execute one "path" through the NDTM.</p>
 <p>An NP-Complete problem is one of a class of problems to which any other NP problem can be reduced in polynomial time. If any NP-Complete problems are found to have polynomial solutions, then P=NP.</p>
 <h1>6.  (20 points)</h1>
 <blockquote>
@@ -761,7 +761,7 @@ different domains. Briefly repeat the proof process here.)
 <p>Consider the case when ϕ is satisfiable. Select a value that satisfies its clause for each triple in G. These nodes will form a k-clique. Each node will be from a different triple and non-contradictory based on our construction.</p>
 <p>∴ G will have a k-clique if ϕ is satisfiable.</p>
 <p>Consider the case when G has a k-clique. Each node in the clique will represent a different triple based on our construction. We can set boolean values for each node based on their labels. These values will not contradict, and each will satisfy its clause based on our constructions.</p>
-<p>∴ ϕ is satisfiable is G has a k-clique.</p>
+<p>∴ ϕ is satisfiable if G has a k-clique.</p>
 <p>∴ G will have a k-clique if and only if ϕ is satisfiable.</p>
     <HR/>
     <div class="footer">
